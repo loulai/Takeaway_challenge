@@ -2,10 +2,10 @@ require "takeaway"
 
 	describe "Louise's takeaway shop" do
 
+		let (:shop) {Shop.new}
+
 		context "the menu" do
 
-			let (:shop) {Shop.new}
-		  
 		  it "has dishes listed in it" do
 		  	expect(shop.menu.any?).to be_true
 		  end
@@ -16,19 +16,27 @@ require "takeaway"
 
 		end
 
+		context "the shop correctly summing" do
+
+			it "the quantity of the order" do
+				expect(shop.total_quantity(["chicken_laksa_noodles", "chicken_laksa_noodles"])).to eq 2
+			end 
+
+			it "the price of the order" do
+				expect(shop.total_price(["chicken_laksa_noodles", "chicken_laksa_noodles"])). to eq 16
+			end
+
+		end
+
 		context "ordering" do
 
 			it "a customer can order" do
-				expect(shop).respond_to?(:customer_order)
+				expect(shop).respond_to?(:customer_order) #why does this pass?!
 			end
 
-			it "the shop can correctly sum the quantity of their order" do
-				expect(shop.customer_order(["chicken_laksa_noodles", "chicken_laksa_noodles"])).to eq 2
-			end 
-
-			it "a shop can correctly sum the price of their order"
-
 		end
+
+		
 
 
 
