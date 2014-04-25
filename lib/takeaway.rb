@@ -5,3 +5,61 @@ class Shop
 	end
 
 end
+
+class Customer
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class Waiter
+
+# 	def take_my_order
+# 	end
+
+# end

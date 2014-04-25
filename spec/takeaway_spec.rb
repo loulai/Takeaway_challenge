@@ -18,9 +18,12 @@ require "takeaway"
 
 		context "ordering" do
 			
-			it "food can be ordered" do
-				
+			it "a customer can order" do
+				customer = Customer.new
+				expect(customer).respond_to?(:order)
 			end
+
+			i
 
 		end
 
@@ -33,3 +36,28 @@ require "takeaway"
 
 
 	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	# it "food can be ordered" do
+	# 			waiter = Waiter.new
+	# 			expect(waiter).respond_to?(:take_my_order)
+	# 		end
