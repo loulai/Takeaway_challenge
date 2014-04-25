@@ -17,13 +17,16 @@ require "takeaway"
 		end
 
 		context "ordering" do
+
+			let (:customer) {Customer.new}
 			
 			it "a customer can order" do
-				customer = Customer.new
-				expect(customer).respond_to?(:order)
+				expect(customer).respond_to?(:their_order)
 			end
 
-			i
+			it "a customer can provide precise quantities of their order" do
+				expect(customer.their_order(["chicken_laksa_noodles", "chicken_laksa_noodles"])).to eq 2
+			end 
 
 		end
 
