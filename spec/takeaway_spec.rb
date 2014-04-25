@@ -6,7 +6,7 @@ require "takeaway"
 
 			let (:shop) {Shop.new}
 		  
-		  it "has dished listed in it" do
+		  it "has dishes listed in it" do
 		  	expect(shop.menu.any?).to be_true
 		  end
 
@@ -18,15 +18,15 @@ require "takeaway"
 
 		context "ordering" do
 
-			let (:customer) {Customer.new}
-			
 			it "a customer can order" do
-				expect(customer).respond_to?(:their_order)
+				expect(shop).respond_to?(:customer_order)
 			end
 
-			it "a customer can provide precise quantities of their order" do
-				expect(customer.their_order(["chicken_laksa_noodles", "chicken_laksa_noodles"])).to eq 2
+			it "the shop can correctly sum the quantity of their order" do
+				expect(shop.customer_order(["chicken_laksa_noodles", "chicken_laksa_noodles"])).to eq 2
 			end 
+
+			it "a shop can correctly sum the price of their order"
 
 		end
 
