@@ -11,37 +11,30 @@ require "takeaway"
 		  end
 
 		  it "each dish has a price" do
-		  	expect(shop.menu[:chicken_laksa_noodles].integer?).to be_true 
+		  	expect(shop.menu[:noodles].integer?).to be_true 
 			end
 
 		end
+
 
 		context "the shop correctly summing" do
 
 			it "the quantity of the order" do
-				expect(shop.total_quantity(["chicken_laksa_noodles", "chicken_laksa_noodles"])).to eq 2
+				expect(shop.total_quantity(["noodles", "noodles"])).to eq 2
 			end 
 
 			it "the price of the order" do
-				expect(shop.total_price(["chicken_laksa_noodles", "chicken_laksa_noodles"])). to eq 16
+				expect(shop.total_price(["noodles", "noodles"])). to eq 16
 			end
 
 		end
 
-		context "ordering" do
 
-			it "a customer can order" do
-				expect(shop).respond_to?(:customer_order) #why does this pass?!
-			end
-
-		end
+			# it "an order can be placed" do
+			# 	expect(shop).respond_to?(:customer_order) #why does this pass?!
+			# end
 
 		
-
-
-
-
-
 
 
 
